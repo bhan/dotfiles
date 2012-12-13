@@ -15,3 +15,5 @@ alias cs61="cd ~/Dropbox/classes/cs61/"
 alias Books="cd ~/Dropbox/Books/"
 alias ssh_amazon="ssh -i ~/.ssh/myhosts.pem ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
 alias ec2_url="ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
+export PKG_CONFIG_PATH='/usr/local/lib/pkgconfig'  
+export LD_LIBRARY_PATH='/usr/local/lib':$LD_LIBRARY_PATH  
