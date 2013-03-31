@@ -5,15 +5,16 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# User specific aliases and functions
-function cs () {
-    cd "$@" && ls
-}
+# Set vim mode
+set -o vi
+alias ls='ls --color --group-directories-first'
+alias pull='git pull --rebase'
 
-alias view="vim -M"
-alias cs61="cd ~/Dropbox/classes/cs61/"
-alias Books="cd ~/Dropbox/Books/"
-alias ssh_amazon="ssh -i ~/.ssh/myhosts.pem ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
-alias ec2_url="ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
-export PKG_CONFIG_PATH='/usr/local/lib/pkgconfig'  
-export LD_LIBRARY_PATH='/usr/local/lib':$LD_LIBRARY_PATH  
+if [ $(hostname) = "appliance" ]; then
+    # CS50 Appliance specific
+    PATH="$HOME"/cs161/sys161/bin:"$HOME"/cs161/sys161/tools/bin:$PATH
+    alias compile="pushd ~/cs161/falconos/kern/compile/ASST3/; bmake depend; bmake; bmake install; popd"
+elif [ $(hostname) = "bhan-samsung" ] || [ $(hostname) = "bhan-dell" ]; then
+    alias ssh_amazon="ssh -i ~/Dropbox/zhong_yao/myhosts.pem ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
+    alias ec2_url="ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
+fi

@@ -66,8 +66,6 @@ let g:indent_guides_guide_size = 1
 " ctrlp config
 let g:ctrlp_working_path_mode = 'c'
 
-" ignore preprocessor check for c
-let g:checksyntax#defs#c#compiler = "splint -preproc"
 
 " syntax highlighting and auto-indentation
 syntax on
