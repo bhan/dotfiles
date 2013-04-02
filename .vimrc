@@ -15,14 +15,15 @@
 "   ,m: toggle mouse support
 "   ,p: toggle paste mode
 "   ,o: open file
-"   ,s: split window
+"   ,hs: split window
+"   ,vs: vsplit window
 "   ,t: new tab
 "   ,w: close tab
 "   kj: enter normal mode and save
 "   Ctrl+{h,j,k,l}: move among windows
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" long live vim
+"long live vim
 set encoding=utf-8
 set nocompatible
 
@@ -143,29 +144,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" shortcuts to common commands
-let mapleader = ","
-nnoremap <leader>a :Ack
-nnoremap <leader>e :tabnew<CR>:CtrlP<CR>
-nnoremap <leader>h :tabnew<CR>:ConqueTerm bash<CR>
-nnoremap <leader>l :NERDTreeToggle<CR>
-nnoremap <leader>k :CheckSyntax<CR>
-nnoremap <leader>o :CtrlP<CR>
-nnoremap <leader>p :set invpaste<CR>
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>s :vsplit<CR>
-nnoremap <leader>w :tabclose<CR>
-
-" ; is better than :, and kj is better than ctrl-c
-nnoremap ; :
-
-" also autosave when going to insert mode
-inoremap kj <Esc>:w<CR>
-
-" more logical vertical navigation
-nnoremap <silent> k gk
-nnoremap <silent> j gj
-
 " make copy/pasting nice
 function! ToggleMouse()
     if &mouse == 'a'
@@ -176,7 +154,31 @@ function! ToggleMouse()
         set nu
     endif
 endfunction
+
+" shortcuts to common commands
+let mapleader = ","
+nnoremap <leader>a :Ack
+nnoremap <leader>e :tabnew<CR>:CtrlP<CR>
+nnoremap <leader>h :tabnew<CR>:ConqueTerm bash<CR>
+nnoremap <leader>l :NERDTreeToggle<CR>
+nnoremap <leader>k :CheckSyntax<CR>
+nnoremap <leader>o :CtrlP<CR>
+nnoremap <leader>p :set invpaste<CR>
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>hs :split<CR>
+nnoremap <leader>vs :vsplit<CR>
+nnoremap <leader>w :tabclose<CR>
 nnoremap <leader>m :call ToggleMouse()<CR>
+
+" ; is better than :, and kj is better than ctrl-c
+nnoremap ; :
+
+" also autosave when going to insert mode
+inoremap kj <Esc>:w<CR>
+
+" more logical vertical navigation
+nnoremap <silent> k gk
+nnoremap <silent> j gj
 
 " statusline insert mode is blue
 function! StatuslineInsertMode()
