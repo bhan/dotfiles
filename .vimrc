@@ -148,10 +148,8 @@ map <C-l> <C-W>l
 function! ToggleMouse()
     if &mouse == 'a'
         set mouse=r
-        set nonu
     else
         set mouse=a
-        set nu
     endif
 endfunction
 
