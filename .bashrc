@@ -17,4 +17,5 @@ if [ $(hostname) = "appliance.localdomain" ]; then
 elif [ $(hostname) = "bhan-samsung" ] || [ $(hostname) = "dell" ]; then
     alias ssh_amazon="ssh -i ~/Dropbox/zhong_yao/myhosts.pem ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
     alias ec2_url="ec2-user@ec2-107-20-98-71.compute-1.amazonaws.com"
+    alias headers="sudo apt-get install linux-headers-$(uname -r)"
 fi

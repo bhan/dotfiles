@@ -53,6 +53,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/trailing-whitespace'
+Bundle 'majutsushi/tagbar'
 
 " syntax files
 Bundle 'pangloss/vim-javascript'
@@ -156,6 +157,7 @@ endfunction
 " shortcuts to common commands
 let mapleader = ","
 nnoremap <leader>a :Ack
+nnoremap <leader>g :TagbarToggle<CR>
 nnoremap <leader>e :tabnew<CR>:CtrlP<CR>
 nnoremap <leader>h :tabnew<CR>:ConqueTerm bash<CR>
 nnoremap <leader>l :NERDTreeToggle<CR>
