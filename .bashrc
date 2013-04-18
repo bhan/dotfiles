@@ -10,7 +10,7 @@ set -o vi
 alias ls='ls --color --group-directories-first'
 alias pull='git pull --rebase'
 
-if [ $(hostname) = "appliance.localdomain" ]; then
+if [ $(hostname) = "appliance" ] || [ $(hostname) = "appliance.localdomain" ]; then
     # CS50 Appliance specific
     PATH="$HOME"/cs161/sys161/bin:"$HOME"/cs161/sys161/tools/bin:$PATH
     alias compile="pushd ~/cs161/falconos/kern/compile/ASST3/; bmake depend; bmake; bmake install; popd"

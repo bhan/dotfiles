@@ -68,6 +68,8 @@ let g:indent_guides_guide_size = 1
 " ctrlp config
 let g:ctrlp_working_path_mode = 'c'
 
+" turn off arrows NERDTREE
+let g:NERDTreeDirArrows=0
 
 " syntax highlighting and auto-indentation
 syntax on
