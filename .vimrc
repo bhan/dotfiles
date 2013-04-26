@@ -54,6 +54,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/trailing-whitespace'
 Bundle 'majutsushi/tagbar'
+Bundle 'Lokaltog/vim-easymotion'
 
 " syntax files
 Bundle 'pangloss/vim-javascript'
