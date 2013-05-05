@@ -172,6 +172,7 @@ nnoremap <leader>hs :split<CR>
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>w :tabclose<CR>
 nnoremap <leader>m :call ToggleMouse()<CR>
+nnoremap <leader>. :CtrlPTag<CR>
 
 " ; is better than :, and kj is better than ctrl-c
 nnoremap ; :
