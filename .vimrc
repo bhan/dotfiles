@@ -40,7 +40,6 @@ Bundle 'tomtom/checksyntax_vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomasr/molokai'
 Bundle 'vim-scripts/Skittles-Dark'
-Bundle 'hukl/Smyck-Color-Scheme'
 Bundle 'vim-scripts/wombat256.vim'
 
 " plugins
