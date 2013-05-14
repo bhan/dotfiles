@@ -7,6 +7,9 @@ fi
 
 # Set vim mode
 set -o vi
+# Set vim as default text editor
+export EDITOR=vim
+
 alias ls='ls --color --group-directories-first'
 alias pull='git pull --rebase'
 
