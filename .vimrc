@@ -37,6 +37,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tomtom/checksyntax_vim'
 
 " color schemes
+Bundle 'hukl/Smyck-Color-Scheme'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomasr/molokai'
 Bundle 'vim-scripts/Skittles-Dark'
