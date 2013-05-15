@@ -11,7 +11,6 @@
 "   ,l: toggle NERDTree
 "   ,h: open a shell in a new tab
 "   ,ig: toggle indentation guide
-"   ,k: syntax-check the current file
 "   ,m: toggle mouse support
 "   ,p: toggle paste mode
 "   ,o: open file
@@ -32,9 +31,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
-
-" plugins
-Bundle 'tomtom/checksyntax_vim'
 
 " color schemes
 Bundle 'hukl/Smyck-Color-Scheme'
@@ -59,9 +55,6 @@ Bundle 'Lokaltog/vim-easymotion'
 " syntax files
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
-
-" checksyntax config
-let g:checksyntax#auto_mode = 0
 
 " indent-guide config
 let g:indent_guides_guide_size = 1
@@ -164,7 +157,6 @@ nnoremap <leader>g :TagbarToggle<CR>
 nnoremap <leader>e :tabnew<CR>:CtrlP<CR>
 nnoremap <leader>h :tabnew<CR>:ConqueTerm bash<CR>
 nnoremap <leader>l :NERDTreeToggle<CR>
-nnoremap <leader>k :CheckSyntax<CR>
 nnoremap <leader>o :CtrlP<CR>
 nnoremap <leader>p :set invpaste<CR>
 nnoremap <leader>t :tabnew<CR>
