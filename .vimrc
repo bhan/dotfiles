@@ -218,3 +218,5 @@ nnoremap <silent> <C-v> <ESC>:call StatuslineVisualMode()<CR><C-v>
 
 " ctrl-c doesn't trigger insertleave, so manually switch statusline
 map <C-c> <C-c>:call StatuslineNormalMode()<CR>
+
+set ttymouse=xterm2
