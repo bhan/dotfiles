@@ -77,9 +77,9 @@ set nu
 " omg folding is the worst
 set nofoldenable
 
-" expand tabs to 4 spaces
-set shiftwidth=4
-set tabstop=4
+" expand tabs to 2 spaces
+set shiftwidth=2
+set tabstop=2
 set smarttab
 set expandtab
 
