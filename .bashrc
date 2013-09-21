@@ -20,6 +20,4 @@ elif [ $(hostname) = "bhan-samsung" ] || [ $(hostname) = "dell" ]; then
     :
     if [ $(hostname) = "bhan-samsung" ]; then
       export PATH="$HOME/anaconda/bin:$PATH"
-    elif [ $(hostname) = "dell" ]; then
-      :
 fi
