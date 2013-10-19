@@ -64,6 +64,8 @@ let g:ctrlp_working_path_mode = 'c'
 
 " turn off arrows NERDTREE
 let g:NERDTreeDirArrows=0
+" don't show .pyc files
+let NERDTreeIgnore = ['\.pyc$']
 
 " syntax highlighting and auto-indentation
 syntax on
