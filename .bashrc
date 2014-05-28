@@ -20,3 +20,5 @@ fi
 if [ $(hostname) = "bhan-samsung" ]; then
   xmodmap /home/bhan/.Xmodmap
 fi
+
+export HISTCONTROL=ignoredups
