@@ -25,36 +25,31 @@
 "long live vim
 set encoding=utf-8
 set nocompatible
+filetype off
 
 " vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-" color schemes
-Bundle 'hukl/Smyck-Color-Scheme'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tomasr/molokai'
-Bundle 'vim-scripts/Skittles-Dark'
-Bundle 'vim-scripts/wombat256.vim'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
 " plugins
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/trailing-whitespace'
-Bundle 'majutsushi/tagbar'
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/trailing-whitespace'
+Plugin 'majutsushi/tagbar'
+Plugin 'Lokaltog/vim-easymotion'
 
 " syntax files
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-markdown'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-markdown'
+
+call vundle#end()
 
 " indent-guide config
 let g:indent_guides_guide_size = 1
@@ -69,15 +64,11 @@ let NERDTreeIgnore = ['\.pyc$','\.o$']
 
 " syntax highlighting and auto-indentation
 syntax on
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 :inoremap # X<C-H>#
 set ai
 set si
 set nu
-
-" omg folding is the worst
-set nofoldenable
 
 " expand tabs to 2 spaces
 set shiftwidth=2
@@ -112,7 +103,6 @@ endif
 " font options
 set background=dark
 set t_Co=256
-colorscheme smyck
 set gfn=Inconsolata:h14
 
 " keep at least 5 lines below the cursor
