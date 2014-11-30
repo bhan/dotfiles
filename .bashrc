@@ -17,3 +17,5 @@ if [ $(hostname) = "bhan-samsung" ]; then
 fi
 
 export HISTCONTROL=ignoredups
+
+alias grepcnr="grep --color=auto -nr"
