@@ -10,7 +10,7 @@ set -o vi
 # Set vim as default text editor
 export EDITOR=vim
 
-alias ls='ls -Gp'
+alias ls='ls -Gp --color=auto'
 
 if [ $(hostname) = "bhan-samsung" ]; then
   xmodmap /home/bhan/.Xmodmap
@@ -19,3 +19,7 @@ fi
 export HISTCONTROL=ignoredups
 
 alias grepcnr="grep --color=auto -nr"
+
+function title {
+  echo -ne "\033]0;"$*"\007"
+}
