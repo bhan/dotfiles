@@ -11,9 +11,11 @@ set -o vi
 export EDITOR=vim
 
 alias ls='ls -Gp --color=auto'
+alias pull='git pull --rebase'
 
 if [ $(hostname) = "bhan-samsung" ]; then
-  xmodmap /home/bhan/.Xmodmap
+#  xmodmap /home/bhan/.Xmodmap
+  :
 fi
 
 export HISTCONTROL=ignoredups
