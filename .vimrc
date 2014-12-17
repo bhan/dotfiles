@@ -151,4 +151,4 @@ set statusline+=\ %4l/%L
 
 set ttymouse=xterm2
 
-source .vimrc.tiny
+source ~/dotfiles/.vimrc.tiny
