@@ -18,11 +18,6 @@
 "   Ctrl+{h,j,k,l}: move among windows
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"long live vim
-set encoding=utf-8
-set nocompatible
-filetype off
-
 " vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -56,6 +51,11 @@ let g:ctrlp_working_path_mode = 'c'
 let g:NERDTreeDirArrows=0
 " don't show .pyc,.o files
 let NERDTreeIgnore = ['\.pyc$','\.o$']
+
+"long live vim
+set encoding=utf-8
+set nocompatible
+filetype off
 
 " syntax highlighting and auto-indentation
 syntax on
@@ -135,9 +135,6 @@ nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>m :call ToggleMouse()<CR>
 nnoremap <leader>. :CtrlPTag<CR>
 
-nnoremap ; :
-inoremap kj <Esc>:w<CR>
-
 " more logical vertical navigation
 nnoremap <silent> k gk
 nnoremap <silent> j gj
@@ -153,3 +150,5 @@ set statusline+=%c
 set statusline+=\ %4l/%L
 
 set ttymouse=xterm2
+
+source .vimrc.tiny
