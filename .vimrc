@@ -9,15 +9,11 @@
 "   ,c<space>: toggle comments
 "   ,e: open file in new tab
 "   ,l: toggle NERDTree
-"   ,h: open a shell in a new tab
 "   ,ig: toggle indentation guide
-"   ,m: toggle mouse support
-"   ,p: toggle paste mode
 "   ,o: open file
 "   ,hs: split window
 "   ,vs: vsplit window
 "   ,t: new tab
-"   ,w: close tab
 "   kj: enter normal mode and save
 "   Ctrl+{h,j,k,l}: move among windows
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -43,7 +39,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'majutsushi/tagbar'
-Plugin 'Lokaltog/vim-easymotion'
 
 " syntax files
 Plugin 'pangloss/vim-javascript'
@@ -94,12 +89,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" disable annoying beep on errors
-set noerrorbells
-if has('autocmd')
-  autocmd GUIEnter * set vb t_vb=
-endif
-
 " font options
 set background=dark
 set t_Co=256
@@ -133,82 +122,34 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" make copy/pasting nice
-function! ToggleMouse()
-    if &mouse == 'a'
-        set mouse=r
-    else
-        set mouse=a
-    endif
-endfunction
-
 " shortcuts to common commands
 let mapleader = ","
 nnoremap <leader>a :Ack
 nnoremap <leader>g :TagbarToggle<CR>
 nnoremap <leader>e :tabnew<CR>:CtrlP<CR>
-nnoremap <leader>h :tabnew<CR>:ConqueTerm bash<CR>
 nnoremap <leader>l :NERDTreeToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
-nnoremap <leader>p :set invpaste<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>hs :split<CR>
 nnoremap <leader>vs :vsplit<CR>
-nnoremap <leader>w :tabclose<CR>
 nnoremap <leader>m :call ToggleMouse()<CR>
 nnoremap <leader>. :CtrlPTag<CR>
 
-" ; is better than :, and kj is better than ctrl-c
 nnoremap ; :
-
-" also autosave when going to insert mode
 inoremap kj <Esc>:w<CR>
 
 " more logical vertical navigation
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
-" statusline insert mode is blue
-function! StatuslineInsertMode()
-    hi statusline ctermbg=6
-endfunction
-
-" statusline normal mode is gray
-function! StatuslineNormalMode()
-    hi statusline ctermbg=240
-endfunction
-call StatuslineNormalMode()
-
-" statusline visual mode is green
-function! StatuslineVisualMode()
-    hi statusline ctermbg=28
-endfunction
-
-" mode text
-function! StatuslineModeText()
-    let mode = mode()
-    if mode == 'i'
-        return 'INSERT'
-    elseif mode == 'v'
-        return 'VISUAL'
-    else
-        return 'NORMAL'
-endfunction
-
 " statusline
 set laststatus=2
-set statusline=%m\ %{StatuslineModeText()}\ %t\ %h%r%y\ %{fugitive#statusline()}\ %#error#%{&paste?'[paste]':''}%*%=%{strlen(&fenc)?&fenc:'none'}\ %{&ff}\ %P\ \L%l:\C%c
-
-" insert mode
-au InsertEnter * call StatuslineInsertMode()
-au InsertLeave * call StatuslineNormalMode()
-
-" visual mode
-nnoremap <silent> v <ESC>:call StatuslineVisualMode()<CR>v
-nnoremap <silent> V <ESC>:call StatuslineVisualMode()<CR>V
-nnoremap <silent> <C-v> <ESC>:call StatuslineVisualMode()<CR><C-v>
-
-" ctrl-c doesn't trigger insertleave, so manually switch statusline
-map <C-c> <C-c>:call StatuslineNormalMode()<CR>
+set statusline=%.20F "filename tail
+set statusline+=\ %{strlen(&fileencoding)?&fileencoding:'none'} "file encoding
+set statusline+=\ %{&fileformat} "file format
+set statusline+=\ %{fugitive#statusline()} " current branch
+set statusline+=%=
+set statusline+=%c
+set statusline+=\ %4l/%L
 
 set ttymouse=xterm2
