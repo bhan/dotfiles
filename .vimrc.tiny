@@ -1,0 +1,3 @@
+nnoremap ; :
+inoremap kj <Esc>:w<CR>
+
