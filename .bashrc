@@ -6,27 +6,27 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Source local definitions
-if [ -f /.bash_local ]; then
-	. /.bash_local
+if [ -f ~/.bash_local ]; then
+	. ~/.bash_local
 fi
 
-# Set vim mode
 set -o vi
-# Set vim as default text editor
 export EDITOR=vim
-
-alias ls='ls -Gp --color=auto'
-alias pull='git pull --rebase'
-
-if [ $(hostname) = "bhan-samsung" ]; then
-#  xmodmap /home/bhan/.Xmodmap
-  :
-fi
-
 export HISTCONTROL=ignoredups
 
-alias grepcnr="grep --color=auto -nr"
-
-function title {
+function title { # title foo changes tab title to foo
   echo -ne "\033]0;"$*"\007"
 }
+
+alias grepcnr="grep --color=auto -nr"
+alias grepcnri="grep --color=auto -nr -i"
+alias ls='ls -Gp --color=auto'
+alias gpull='git pull'
+alias gpush='git push'
+alias gmerge='git merge'
+
+# Source local aliases
+if [ -f /.bash_aliases ]; then
+	. /.bash_aliases
+fi
+
