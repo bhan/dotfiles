@@ -26,12 +26,9 @@ Plugin 'gmarik/vundle'
 " plugins
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'majutsushi/tagbar'
 
@@ -47,17 +44,14 @@ let g:indent_guides_guide_size = 1
 " ctrlp config
 let g:ctrlp_working_path_mode = 'c'
 
-" turn off arrows NERDTREE
-let g:NERDTreeDirArrows=0
-" don't show .pyc,.o files
-let NERDTreeIgnore = ['\.pyc$','\.o$']
+
+let g:NERDTreeDirArrows=0 " turn off arrows NERDTREE
+let g:NERDTreeIgnore = ['\.pyc$','\.o$'] " don't show certain files
 
 "long live vim
 set encoding=utf-8
 set nocompatible
-filetype off
-
-" syntax highlighting and auto-indentation
+filetype off " syntax highlighting and auto-indentation
 syntax on
 filetype plugin indent on
 :inoremap # X<C-H>#
