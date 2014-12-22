@@ -51,10 +51,7 @@ let g:NERDTreeIgnore = ['\.pyc$','\.o$'] " don't show certain files
 "long live vim
 set encoding=utf-8
 set nocompatible
-filetype off " syntax highlighting and auto-indentation
 syntax on
-filetype plugin indent on
-:inoremap # X<C-H>#
 set ai
 set si
 set nu
