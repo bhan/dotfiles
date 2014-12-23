@@ -11,6 +11,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'majutsushi/tagbar'
+Plugin 'Valloric/YouCompleteMe'
 
 " syntax files
 Plugin 'pangloss/vim-javascript'
