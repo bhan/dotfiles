@@ -114,3 +114,6 @@ set statusline+=\ %{&fileformat} "file format
 set ttymouse=xterm2
 
 source ~/dotfiles/.vimrc.tiny
+if filereadable("/google/data/rw/users/bo/bohan/vimrc")
+  source /google/data/rw/users/bo/bohan/vimrc
+endif

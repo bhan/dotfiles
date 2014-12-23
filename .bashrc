@@ -21,6 +21,8 @@ function title { # title foo changes tab title to foo
 alias grepcnr="grep --color=auto -nr"
 alias grepcnri="grep --color=auto -nr -i" # ignore case
 alias ls='ls -Gp --color=auto'
+alias lsla='ls -la'
+alias lslah='ls -lah'
 alias tmuxnews='tmux new -s' # tmux new session
 alias tmuxattacht='tmux attach -t' # tmux attach session
 alias tmuxls='tmux list-sessions' # tmux list sessions
