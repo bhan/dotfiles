@@ -29,6 +29,12 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:NERDTreeDirArrows=0 " turn off arrows
 let g:NERDTreeIgnore = ['\.pyc$','\.o$'] " hide certain files
 
+" YouCompleteMe config
+let g:ycm_min_num_of_chars_for_completion = 1
+
+" change popup menu style
+highlight Pmenu ctermfg=white ctermbg=blue
+
 set encoding=utf-8
 set nocompatible
 syntax on
