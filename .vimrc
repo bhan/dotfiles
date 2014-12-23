@@ -12,6 +12,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
+"Plugin ultisnips someday
 if filereadable("/google/data/rw/users/bo/bohan/vimrc") " at Google
   source /google/data/rw/users/bo/bohan/vimrc
 else " not at Google
