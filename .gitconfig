@@ -2,6 +2,7 @@
 	name = Bo Ning Han
 	email = bo.ning.han@gmail.com
 [core]
+  autocrlf = input
 	editor = vim
 [diff]
   tool = vimdiff
