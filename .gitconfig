@@ -3,3 +3,5 @@
 	email = bo.ning.han@gmail.com
 [core]
 	editor = vim
+[diff]
+  tool = vimdiff
