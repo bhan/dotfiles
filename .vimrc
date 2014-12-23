@@ -11,7 +11,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'bling/vim-airline'
+if filereadable("/google/data/rw/users/bo/bohan/vimrc") " at Google
+  source /google/data/rw/users/bo/bohan/vimrc
+else " not at Google
+  Plugin 'Valloric/YouCompleteMe'
+endif
 
 " syntax files
 Plugin 'pangloss/vim-javascript'
@@ -108,19 +113,6 @@ nnoremap <leader>, :nohlsearch<CR> " clear search highlight
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
-" statusline
-set laststatus=2
-set statusline=%.40F "filename tail
-set statusline+=\ %{fugitive#statusline()} " current branch
-set statusline+=\ L%l/%L
-set statusline+=\ C%c
-set statusline+=%=
-set statusline+=\ %{strlen(&fileencoding)?&fileencoding:'none'} "file encoding
-set statusline+=\ %{&fileformat} "file format
-
 set ttymouse=xterm2
 
 source ~/dotfiles/.vimrc.tiny
-if filereadable("/google/data/rw/users/bo/bohan/vimrc")
-  source /google/data/rw/users/bo/bohan/vimrc
-endif
