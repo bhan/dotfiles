@@ -3,6 +3,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/vundle'
 
+let mapleader = ","
+
 " plugins
 Plugin 'mileszs/ack.vim' " requires ack
 Plugin 'kien/ctrlp.vim'
@@ -103,7 +105,6 @@ map <C-k> <C-W>k
 map <C-l> <C-W>l
 
 " shortcuts to common commands
-let mapleader = ","
 nnoremap <leader>a :Ack
 nnoremap <leader>g :TagbarToggle<CR>
 nnoremap <leader>l :NERDTreeToggle<CR>
