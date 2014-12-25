@@ -39,6 +39,9 @@ let g:NERDTreeIgnore = ['\.pyc$','\.o$'] " hide certain files
 
 " YouCompleteMe config
 let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_file_blacklist = {
+  \ 'c' : 1
+  \}
 
 " vim-airplane config
 let g:airline_theme = 'understated'
