@@ -59,6 +59,7 @@ set shiftwidth=2
 set tabstop=2
 set smarttab
 set expandtab
+set softtabstop=2
 
 " faster tab navigation
 nnoremap <S-tab> :tabprevious<CR>
