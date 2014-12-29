@@ -13,6 +13,8 @@ fi
 set -o vi
 export EDITOR=vim
 export HISTCONTROL=ignoredups
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 function title { # title foo changes tab title to foo
   echo -ne "\033]0;"$*"\007"
@@ -20,7 +22,7 @@ function title { # title foo changes tab title to foo
 
 alias grepcnr="grep --color=auto -nr"
 alias grepcnri="grep --color=auto -nr -i" # ignore case
-alias ls='ls -Gp'
+alias ls='ls -Gp --color=auto'
 alias lsla='ls -la'
 alias lslah='ls -lah'
 alias tmuxnews='tmux new -s' # tmux new session
