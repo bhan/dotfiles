@@ -1,0 +1,1 @@
+alias ls='lis -Gp --color'
