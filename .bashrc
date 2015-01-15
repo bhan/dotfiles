@@ -2,12 +2,17 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+  . /etc/bashrc
 fi
 
 # Source local definitions
 if [ -f ~/.bash_local ]; then
-	. ~/.bash_local
+  . ~/.bash_local
+fi
+
+# Source Linux-specific definitions
+if [ -f ~/dotfiles/.bash_linux ]; then
+  . ~/dotfiles/.bash_linux
 fi
 
 set -o vi
@@ -22,7 +27,6 @@ function title { # title foo changes tab title to foo
 
 alias grepcnr="grep --color=auto -nr"
 alias grepcnri="grep --color=auto -nr -i" # ignore case
-alias ls='ls -Gp'
 alias lsla='ls -la'
 alias lslah='ls -lah'
 alias tmuxnews='tmux new -s' # tmux new session
