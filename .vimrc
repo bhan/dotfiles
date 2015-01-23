@@ -35,7 +35,7 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " NERDTree config
 let g:NERDTreeDirArrows=0 " turn off arrows
-let g:NERDTreeIgnore = ['\.pyc$','\.o$'] " hide certain files
+let g:NERDTreeIgnore = ['\.class','\.pyc$','\.o$'] " hide certain files
 
 " YouCompleteMe config
 let g:ycm_min_num_of_chars_for_completion = 1
