@@ -1,9 +1,7 @@
-source ~/dotfiles/antigen.zsh
+#source ~/dotfiles/antigen.zsh
+#antigen use oh-my-zsh
+#antigen apply
 
-antigen use oh-my-zsh
-antigen bundle git
-
-antigen apply
-
-PROMPT="$ %~ %n@%m
-"
+autoload -U colors && colors
+PROMPT='%{$fg[yellow]%}$ %{$fg[red]%}%~ %{$fg[blue]%}%n@%m %{$reset_color%}
+'
