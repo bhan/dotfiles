@@ -38,3 +38,6 @@ alias tmuxswitcht='tmux switch -t' # tmux switch session
 if [ -f /.bash_aliases ]; then
 	. /.bash_aliases
 fi
+
+PATH=$PATH:~/bin
+export PATH
