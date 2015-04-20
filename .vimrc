@@ -15,6 +15,7 @@ Plugin 'vim-scripts/trailing-whitespace'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'gcmt/taboo.vim'
+Plugin 'derekwyatt/vim-scala'
 "Plugin ultisnips someday
 
 if filereadable("/google/data/rw/users/bo/bohan/vimrc") " at Google
