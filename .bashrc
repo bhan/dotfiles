@@ -11,7 +11,8 @@ if [ -f ~/.bash_local ]; then
 fi
 
 # Source Linux-specific definitions
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && [ -f ~/dotfiles/.bash_linux ]; then
+UNAME=$(uname -s)
+if [ "${UNAME:1:5}" == "Linux" ] && [ -f ~/dotfiles/.bash_linux ]; then
   . ~/dotfiles/.bash_linux
 fi
 
