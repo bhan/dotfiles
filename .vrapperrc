@@ -1,0 +1,9 @@
+set shiftwidth=2
+set tabstop=2
+set smarttab
+set expandtab
+
+noremap ; :
+inoremap kj <Esc>:w<CR>
+set ignorecase
+set smartcase
