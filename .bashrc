@@ -12,7 +12,7 @@ fi
 
 # Source Linux-specific definitions
 UNAME=$(uname -s)
-if [ "${UNAME:1:5}" == "Linux" ] && [ -f ~/dotfiles/.bash_linux ]; then
+if [ "${UNAME:0:5}" == "Linux" ] && [ -f ~/dotfiles/.bash_linux ]; then
   . ~/dotfiles/.bash_linux
 fi
 
