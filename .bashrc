@@ -38,4 +38,5 @@ if [ -f /.bash_aliases ]; then
   . /.bash_aliases
 fi
 
-export PATH="/usr/local/heroku/bin:~/bin:$PATH"
+# home directory executables
+export PATH="~/bin:$PATH"
