@@ -1,2 +1,3 @@
+"source ~/.vimrc
 nnoremap ; :
 inoremap kj <Esc>:w<CR>
