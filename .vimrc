@@ -7,7 +7,7 @@ let mapleader = ","
 
 " plugins
 Plugin 'mileszs/ack.vim' " requires ack
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -16,6 +16,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'gcmt/taboo.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'craigemery/vim-autotag'
 "Plugin ultisnips someday
 
 if filereadable("/google/data/rw/users/bo/bohan/vimrc") " at Google
@@ -52,6 +53,7 @@ let g:airline_theme = 'understated'
 " change popup menu style
 highlight Pmenu ctermfg=white ctermbg=blue
 
+set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
 set encoding=utf-8
 set nocompatible
 syntax on
@@ -120,6 +122,9 @@ nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>hs :split<CR>
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>, :nohlsearch<CR> " clear search highlight
+nnoremap <leader>k <C-]><CR>
+nnoremap <leader>j <C-t><CR>
+
 
 " more logical vertical navigation
 nnoremap <silent> k gk
