@@ -20,11 +20,11 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'craigemery/vim-autotag'
 "Plugin ultisnips someday
 
-if filereadable("/google/data/rw/users/bo/bohan/vimrc") " at Google
-  source /google/data/rw/users/bo/bohan/vimrc
-else " not at Google
-  Plugin 'Valloric/YouCompleteMe'
-endif
+"if filereadable("/google/data/rw/users/bo/bohan/vimrc") " at Google
+"  source /google/data/rw/users/bo/bohan/vimrc
+"else " not at Google
+"  Plugin 'Valloric/YouCompleteMe'
+"endif
 
 " syntax files
 Plugin 'pangloss/vim-javascript'
@@ -43,10 +43,10 @@ let g:NERDTreeDirArrows=0 " turn off arrows
 let g:NERDTreeIgnore = ['\.class','\.pyc$','\.o$'] " hide certain files
 
 " YouCompleteMe config
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_file_blacklist = {
-  \ 'c' : 1
-  \}
+"let g:ycm_min_num_of_chars_for_completion = 1
+"let g:ycm_file_blacklist = {
+"  \ 'c' : 1
+"  \}
 
 " vim-airplane config
 let g:airline_theme = 'understated'
@@ -119,17 +119,13 @@ nnoremap <leader>a :Ack
 nnoremap <leader>g :TagbarToggle<CR>
 nnoremap <leader>l :NERDTreeToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
+nnoremap <leader>. :CtrlPTag<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>hs :split<CR>
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>, :nohlsearch<CR> " clear search highlight
 nnoremap <leader>k <C-]><CR>
 nnoremap <leader>j <C-t><CR>
-
-
-" more logical vertical navigation
-nnoremap <silent> k gk
-nnoremap <silent> j gj
 
 set ttymouse=xterm2
 

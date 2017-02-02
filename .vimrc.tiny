@@ -1,2 +1,8 @@
 nnoremap ; :
 inoremap kj <Esc>:w<CR>
+
+" more logical vertical navigation
+nnoremap <silent> k gk
+nnoremap <silent> j gj
+
+set clipboard=unnamed
