@@ -24,12 +24,6 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 alias grepcnr="grep --color=auto -nr"
 alias grepcnri="grep --color=auto -nr -i" # ignore case
-alias lsla='ls -la'
-alias lslah='ls -lah'
-alias tmuxnews='tmux new -s' # tmux new session
-alias tmuxattacht='tmux attach -t' # tmux attach session
-alias tmuxls='tmux list-sessions' # tmux list sessions
-alias tmuxswitcht='tmux switch -t' # tmux switch session
 
 PS1='\[\e[1;32m\]\u@\h \w\$\[\e[0m\] ' # change prompt color
 
