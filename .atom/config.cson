@@ -1,0 +1,13 @@
+"*":
+  editor:
+    fontSize: 12
+    lineHeight: 1.1
+    showIndentGuide: true
+    softWrap: true
+  "exception-reporting":
+    userId: "9c88978d-2c13-425c-b717-afc580c3f672"
+".python.source":
+  editor:
+    tabLength: 2
+editor:
+  softWrap: true
