@@ -87,5 +87,12 @@ export EDITOR=vim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias grepcnr="grep --color=auto -nr"
 alias grepcnri="grep --color=auto -nr -i" # ignore case
+alias rmr="rm -r"
+alias cdayd="~/qqmm/mini_programs/ayd"
+alias cdtyk="~/qqmm/mini_programs/tyk"
+alias cdapp="~/qqmm/flutter/flutter_ayd"
+alias cdback="~/qqmm/backend/"
+alias cddata="~/data/"
+alias prodflask="FLASK_APP=main.py APP_SETTINGS="../backend_config/production_local.cfg" flask"
 
-eval `opam config env`
+export PYTHONPATH=$PYTHONPATH:~/tensorflow/models/research:~/tensorflow/models/research/slim
