@@ -34,6 +34,3 @@ fi
 
 # home directory executables
 export PATH="~/bin:$PATH"
-
-# opam
-opam config env
