@@ -3,6 +3,8 @@
 	email = bo.ning.han@gmail.com
 [core]
   autocrlf = input
-	editor = vim
+  editor = vim
+  sshCommand = "ssh -i ~/.ssh/id_rsa"
 [diff]
   tool = vimdiff
+
