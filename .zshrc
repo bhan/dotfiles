@@ -101,6 +101,7 @@ alias cdapp="~/qqmm/flutter/flutter_ayd"
 alias cdback="~/qqmm/backend/"
 alias cddata="~/data/"
 alias prodflask="FLASK_APP=main.py APP_SETTINGS="../backend_config/production_local.cfg" flask"
+alias tmux="direnv exec / tmux"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
